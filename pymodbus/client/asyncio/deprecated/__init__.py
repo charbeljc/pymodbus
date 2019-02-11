@@ -9,13 +9,13 @@ and asyncio
 
 Example run::
 
-    from pymodbus.client.async import schedulers
+    from pymodbus.client.asyncio import schedulers
 
     # Import The clients
 
-    from pymodbus.client.async.tcp import AsyncModbusTCPClient as Client
-    from pymodbus.client.async.serial import AsyncModbusSerialClient as Client
-    from pymodbus.client.async.udp import AsyncModbusUDPClient as Client
+    from pymodbus.client.asyncio.tcp import AsyncModbusTCPClient as Client
+    from pymodbus.client.asyncio.serial import AsyncModbusSerialClient as Client
+    from pymodbus.client.asyncio.udp import AsyncModbusUDPClient as Client
 
     # For tornado based async client use
     event_loop, future = Client(schedulers.IO_LOOP, port=5020)

@@ -4,13 +4,13 @@ Async Modbus Client implementation based on Twisted, tornado and asyncio
 
 Example run::
 
-    from pymodbus.client.async import schedulers
+    from pymodbus.client.asyncio import schedulers
 
     # Import The clients
 
-    from pymodbus.client.async.tcp import AsyncModbusTCPClient as Client
-    from pymodbus.client.async.serial import AsyncModbusSerialClient as Client
-    from pymodbus.client.async.udp import AsyncModbusUDPClient as Client
+    from pymodbus.client.asyncio.tcp import AsyncModbusTCPClient as Client
+    from pymodbus.client.asyncio.serial import AsyncModbusSerialClient as Client
+    from pymodbus.client.asyncio.udp import AsyncModbusUDPClient as Client
 
     # For tornado based async client use
     event_loop, future = Client(schedulers.IO_LOOP, port=5020)
@@ -36,7 +36,7 @@ from pymodbus.compat import is_installed
 installed = is_installed('twisted')
 if installed:
     # Import deprecated async client only if twisted is installed #338
-    from pymodbus.client.async.deprecated.async import *
+    from pymodbus.client.asyncio.deprecated.asyncio import *
 else:
     import logging
     logger = logging.getLogger(__name__)

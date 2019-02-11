@@ -2,12 +2,12 @@ from __future__ import unicode_literals
 from __future__ import absolute_import
 
 import logging
-from pymodbus.client.async.factory.serial import get_factory
+from pymodbus.client.asyncio.factory.serial import get_factory
 from pymodbus.transaction import ModbusRtuFramer, ModbusAsciiFramer, ModbusBinaryFramer, ModbusSocketFramer
 from pymodbus.factory import ClientDecoder
 from pymodbus.exceptions import ParameterException
 from pymodbus.compat import IS_PYTHON3, PYTHON_VERSION
-from pymodbus.client.async.schedulers import ASYNC_IO
+from pymodbus.client.asyncio.schedulers import ASYNC_IO
 
 logger = logging.getLogger(__name__)
 
@@ -18,7 +18,7 @@ class AsyncModbusSerialClient(object):
 
     To use do::
 
-        from pymodbus.client.async.serial import AsyncModbusSerialClient
+        from pymodbus.client.asyncio.serial import AsyncModbusSerialClient
     """
     @classmethod
     def _framer(cls, method):

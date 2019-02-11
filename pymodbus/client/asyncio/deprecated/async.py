@@ -39,7 +39,7 @@ from pymodbus.transaction import ModbusSocketFramer
 from pymodbus.transaction import FifoTransactionManager
 from pymodbus.transaction import DictTransactionManager
 from pymodbus.client.common import ModbusClientMixin
-from pymodbus.client.async.deprecated import deprecated
+from pymodbus.client.asyncio.deprecated import deprecated
 from twisted.internet import defer, protocol
 from twisted.python.failure import Failure
 
